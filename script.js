@@ -1,8 +1,17 @@
 //Bring in toggle buttons (querySelectorAll)
+
 const toggles = document.querySelectorAll(".faq-toggle");
 
-//Loop through the node list
+//Loop through the node list (forEach)
 
-//Add a click event (addEventListener)
+toggles.forEach((toggle) => {
+  console.log(toggle);
 
-//Toggle the active class on the parent node (.parentNode & classList.toggle())
+  //Add a click event (addEventListener)
+
+  toggle.addEventListener("click", () => {
+    //Toggle the active class on the parent node (.parentNode & classList.toggle())
+
+    toggle.parentNode.classList.toggle("active");
+  });
+});
